@@ -8,15 +8,20 @@ try:
     browser.get(link)
 
     # Ваш код, который заполняет обязательные поля
-    input1 = browser.find_element(By.XPATH, '/html/body/div/form/div[1]/div[1]/input')
+    input1 = browser.find_element(By.CSS_SELECTOR,
+                                  'body > div > form > div.first_block > div.form-group.first_class > input')
     input1.send_keys('Aleksandr')
-    input2 = browser.find_element(By.XPATH, '/html/body/div/form/div[1]/div[2]/input')
+    input2 = browser.find_element(By.CSS_SELECTOR,
+                                  'body > div > form > div.first_block > div.form-group.second_class > input')
     input2.send_keys('Andreev')
-    input3 = browser.find_element(By.XPATH, '/html/body/div/form/div[1]/div[3]/input')
+    input3 = browser.find_element(By.CSS_SELECTOR,
+                                  'body > div > form > div.first_block > div.form-group.third_class > input')
     input3.send_keys('mrak808@gmail.com')
-    input4 = browser.find_element(By.XPATH, '/html/body/div/form/div[2]/div[1]/input')
+    input4 = browser.find_element(By.CSS_SELECTOR,
+                                  'body > div > form > div.second_block > div.form-group.first_class > input')
     input4.send_keys('+79526428547')
-    input5 = browser.find_element(By.XPATH, '/html/body/div/form/div[2]/div[2]/input')
+    input5 = browser.find_element(By.CSS_SELECTOR,
+                                  'body > div > form > div.second_block > div.form-group.second_class > input')
     input5.send_keys('Kirpichnaya street, 30')
 
     # Отправляем заполненную форму
